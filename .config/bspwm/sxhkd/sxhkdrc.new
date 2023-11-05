@@ -1,0 +1,63 @@
+########################################################
+##                  Applications                      ##
+########################################################
+
+# Webbrowser
+super + shift + w
+    firefox
+
+# Mail-Client
+super + shift + m
+    thunderbird
+
+# Signal-Desktop
+
+# Discord
+
+# Music-Player
+
+# Keepass
+
+# File-Manager
+super + shift + f
+    thunar
+
+########################################################
+##               Terminal-Applications                ##
+########################################################
+
+# System-Monitor (H-top)
+strg + alt + h
+
+# File-Manager (Ranger)
+strg + alt + r
+
+########################################################
+##                  Window-Management                 ##
+########################################################
+
+# Focus window directional
+super + {h,j,k,l}
+    bspc node --{focus} {west,south,north,ost}
+
+# Swap windows directional
+super + shift + {h,j,k,l}
+    bspc node --{focus,swap} {west,south,north,ost}
+
+#Change Workspaces directional
+ctrl + alt + {left,right}
+    bspc desktop -f {prev.local,next.local}
+
+#Switch Workspaces or send focused node to another workspace
+super + {_,shift + }{0-9}
+    bspc {desktop -f,node -d} '^{0-9}' '--follow'
+
+########################################################
+##                        Launcher                    ##
+########################################################
+
+# Launcher-Main (D-Menu)
+super + shift + d
+
+# Launcher-Alt (Rofi)
+super + d
