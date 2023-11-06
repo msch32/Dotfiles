@@ -2,6 +2,13 @@
 ##                  Applications                      ##
 ########################################################
 
+#terminal (Alacritty)
+super + enter
+    alacritty
+
+#Drop-Down-Terminal
+F12
+    xfce4-terminal --drop-down
 # Webbrowser
 super + shift + w
     firefox
@@ -11,12 +18,18 @@ super + shift + m
     thunderbird
 
 # Signal-Desktop
-
+super + F1
+    signal
 # Discord
-
+super + F2
+    discord
 # Music-Player
+super + F3
+    spotify
 
 # Keepass
+super + F4
+    keepassxc
 
 # File-Manager
 super + shift + f
@@ -27,7 +40,7 @@ super + shift + f
 ########################################################
 
 # System-Monitor (H-top)
-strg + alt + h
+
 
 # File-Manager (Ranger)
 strg + alt + r
@@ -45,7 +58,7 @@ super + shift + {h,j,k,l}
     bspc node --{focus,swap} {west,south,north,ost}
 
 #Change Workspaces directional
-ctrl + alt + {left,right}
+ctrl + alt + {h,l}
     bspc desktop -f {prev.local,next.local}
 
 #Switch Workspaces or send focused node to another workspace
