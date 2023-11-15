@@ -34,7 +34,9 @@ super + F4
 # File-Manager
 super + shift + f
     thunar
-
+# Text-Editor
+super + shift + e
+    geany
 ########################################################
 ##               Terminal-Applications                ##
 ########################################################
@@ -49,12 +51,8 @@ strg + alt + r
 ##                  Window-Management                 ##
 ########################################################
 
-# Focus window directional
-super + {h,j,k,l}
-    bspc node --{focus} {west,south,north,ost}
-
-# Swap windows directional
-super + shift + {h,j,k,l}
+# Focus /swap window directional
+super + {_,shift}{h,j,k,l}
     bspc node --{focus,swap} {west,south,north,ost}
 
 #Change Workspaces directional
@@ -64,7 +62,25 @@ ctrl + alt + {h,l}
 #Switch Workspaces or send focused node to another workspace
 super + {_,shift + }{0-9}
     bspc {desktop -f,node -d} '^{0-9}' '--follow'
+#Toggle Layout (Tiled/Monocle)
+super + l
+    bspc desktop -l next
 
+#Toggle Fullscreen
+super + f
+    bspc node -t "~"fullscreen
+
+#Toggle between floating and tiled
+super + space
+    bspc node -t "~"{floating,tiled}
+
+#close window
+super + c
+    bspc node -c
+
+#kill window
+ctrl + alt + Escape
+    xkill
 ########################################################
 ##                        Launcher                    ##
 ########################################################
