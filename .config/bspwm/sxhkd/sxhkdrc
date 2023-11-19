@@ -3,7 +3,7 @@
 ########################################################
 
 #terminal (Alacritty)
-super + enter
+super + Return
     alacritty
 
 #Drop-Down-Terminal
@@ -52,18 +52,18 @@ strg + alt + r
 ########################################################
 
 # Focus /swap window directional
-super + {_,shift}{h,j,k,l}
-    bspc node --{focus,swap} {west,south,north,ost}
+super + {_,shift} + {h,j,k,l}
+    bspc node --{focus,swap} {west,south,north,east}
 
 #Change Workspaces directional
-ctrl + alt + {h,l}
-    bspc desktop -f {prev.local,next.local}
+ctrl + alt + {_,shift} + {h,l}
+    bspc {desktop -f,node -d} {prev.local,next.local}
 
 #Switch Workspaces or send focused node to another workspace
 super + {_,shift + }{0-9}
     bspc {desktop -f,node -d} '^{0-9}' '--follow'
 #Toggle Layout (Tiled/Monocle)
-super + l
+super + m
     bspc desktop -l next
 
 #Toggle Fullscreen
@@ -82,10 +82,21 @@ super + c
 ctrl + alt + Escape
     xkill
 
+#reload sxhkd:
+super + shift + s
+    pkill -USR1 -x sxhkd
+
+#restart bspwm
+super + shift + r
+    ~/.config/bspwm/bspwmrc
+
 #Locksreen
-super + shift + l
+super + ctrl + shift + l
     betterlockscreen --lock
 
+#archlinux-logout
+super + x
+    archlinux-logout
 
 ########################################################
 ##                        Launcher                    ##
@@ -93,6 +104,8 @@ super + shift + l
 
 # Launcher-Main (D-Menu)
 super + shift + d
+    dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 # Launcher-Alt (Rofi)
 super + d
+    ~/.config/bspwm/launcher/launcher.sh
