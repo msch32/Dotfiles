@@ -98,6 +98,17 @@ super + ctrl + shift + l
 super + x
     archlinux-logout
 
+#raise Volume
+XF86AudioRaiseVolume
+    amixer -D pulse set Master 10%+
+
+#lower Volume
+XF86AudioLowerVolume
+    amixer -D pulse set Master 10%-
+
+# Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
 ########################################################
 ##                        Launcher                    ##
 ########################################################
