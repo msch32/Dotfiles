@@ -81,6 +81,12 @@ super + c
 #kill window
 ctrl + alt + Escape
     xkill
+
+#Locksreen
+super + shift + l
+    betterlockscreen --lock
+
+
 ########################################################
 ##                        Launcher                    ##
 ########################################################
