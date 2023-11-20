@@ -42,11 +42,12 @@ super + shift + e
 ########################################################
 
 # System-Monitor (H-top)
-
+ctrl + alt + b
+    alacritty -e htop
 
 # File-Manager (Ranger)
-strg + alt + r
-
+ctrl + alt + r
+    alacritty -e ranger
 ########################################################
 ##                  Window-Management                 ##
 ########################################################
