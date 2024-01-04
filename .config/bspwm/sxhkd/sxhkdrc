@@ -75,6 +75,10 @@ super + f
 super + space
     bspc node -t "~"{floating,tiled}
 
+#Move focused window:
+ctrl + alt + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
 #close window
 super + c
     bspc node -c
@@ -98,6 +102,11 @@ super + ctrl + shift + l
 #archlinux-logout
 super + x
     archlinux-logout
+
+
+#########################################################
+####                  System-Control                #####
+#########################################################
 
 #raise Volume
 XF86AudioRaiseVolume
