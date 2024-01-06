@@ -1,0 +1,9 @@
+VISUAL=vim eport Editor="$VISUAL"
+
+#Aliases
+#
+#Git-Aliases
+alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+
+#list
+alias ls='exa -lah --color=always --group-directories-first'
